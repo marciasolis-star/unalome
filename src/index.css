@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-unalome-green: #03bb85;
+  --color-unalome-green-light: #73ece0;
+  --color-unalome-green-dark: #5CBCB3;
+}
+
+body {
+  @apply font-sans bg-unalome-green text-white;
+}
+
+.serif {
+  @apply font-serif;
+}
+
+:root {
+  --max-w-240px: 240px;
+  --background-color: #5CBCB3;
+  --foreground-color: #ffffff;
+}
+
+:root::selection {
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+  text-underline-offset: var(--color-unalome-green);
+}
+
+/* :root {
+--verde-principal:#4FAF9F;
+--verde-claro:#6FC3B5;
+--verde-luz:#9ED9CF;
+--verde-profundo:#2F8F85;
+--blanco-suave:#F5F7F6;
+} */
+
+/* .hero {
+height:100vh;
+
+background:
+linear-gradient(
+rgba(79,175,159,0.85),
+rgba(111,195,181,0.85)
+);
+
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+} */
+
+/* .logo {
+width:120px;
+position:relative;
+z-index:2;
+} */
+
+
+/* .logo::before {
+content:"";
+position:absolute;
+top:-40px;
+left:-40px;
+
+width:200px;
+height:200px;
+
+background:radial-gradient(
+circle,
+rgba(158,217,207,0.7) 0%,
+rgba(158,217,207,0.3) 40%,
+rgba(158,217,207,0) 70%
+);
+
+filter:blur(20px);
+z-index:-1;
+} */
+
+
+
+/* .hero::after{
+
+content:"";
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%; */
+
+/* background-image:url("texture.png"); */
+
+/* opacity:0.08;
+
+pointer-events:none;
+
+} */
+.app {
+  @apply min-h-screen bg-unalome-green-dark selection:bg-white selection:text-unalome-green;
+}
+
+.header {
+  @apply fixed top-0 left-0 right-0 z-50 bg-unalome-green-light backdrop-blur-md border-b border-white/10;
+}
+
+.logo {
+  @apply w-10 h-10 flex items-center justify-center;
+}
+
+.hero {
+  @apply h-screen bg-gradient-to-b from-unalome-green-light to-unalome-green-dark flex items-center justify-center text-center text-white;
+}
+
+.img {
+  @apply w-[120px] h-[120px] relative z-2;
+}
+
+.span {
+  @apply font-serif text-base font-semibold;
+}
+
+@media screen and (min-width: 768px) {
+  .span {
+    @apply flex gap-3 text-sm uppercase tracking-widest font-medium;
+  }
+    
+  }
