@@ -1,26 +1,8 @@
-# variables
-.env
-,env.local
-.env.development
-
-# dependencies
-/node_modules
-
-# production
-/build
-/dist
-
-# misc
+/node_modules/
+/build/
+/dist/
+coverage/
 .DS_Store
 *.log
-node_modules
-node_modules
-node_modules
-node_modules
-node_modules
-node_modules
-node_modules
-node_modules
-node_modules
-node_modules
-node_modules
+.env*
+!.env.example
