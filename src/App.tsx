@@ -230,11 +230,13 @@ export default function App() {
               </div>
               <div className="mt-auto">
                 <div className="text-4xl font-bold mb-6">USD 640</div>
-                <button className="w-full bg-white text-unalome-green py-4 rounded-2xl font-bold hover:bg-opacity-90 transition-all">
+               <a href="https://www.paypal.com/cgi-bin/webscr...">
+               <button className="w-full bg-white text-unalome-green py-4 rounded-2xl font-bold hover:bg-opacity-90 transition-all">
                   Comenzar Proceso <span className="text-gray-200">
                     (Proximamente)
                   </span>
                 </button>
+                </a>
               </div>
             </motion.div>
           </div>
