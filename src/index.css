@@ -8,6 +8,7 @@
   --color-unalome-green: #03bb85;
   --color-unalome-green-light: #73ece0;
   --color-unalome-green-dark: #5CBCB3;
+  --color-unalome-purple: 
 }
 
 body {
@@ -332,6 +333,7 @@ margin-bottom: 2rem;
 }
 
 .image-card {
+  position: relative;
   aspect-ratio: 4 / 5;         /* aspect-4/5 */
   border-radius: 40px;         /* rounded-[40px] */
   overflow: hidden;
@@ -355,6 +357,29 @@ margin-bottom: 2rem;
   border-radius: 1.5rem;       /* rounded-3xl */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
+.brief-bio-container {
+  display: flex;
+  margin-top: 2rem;
+  padding: 1.25rem 3rem; /* px-12 py-5 */
+  margin-right: 3rem;
+  margin-left: 3rem;
+  border-radius: 1.5rem;
+} 
+.brief-bio-button {
+   padding: 1.25rem 3rem; /* px-12 py-5 */
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.125rem; /* text-lg */
+  text-decoration: none;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* shadow-2xl */
+  transition: transform 0.3s ease; /* transition-transform */
+  bottom: -1.5rem;             /* -bottom-6 */
+  left: -1.5rem;               /* -left-6 */
+  top: 0;
+  margin-right: 3rem;
+position: relative;
+  
+} 
 .selection\:bg-white {
     & *::selection {
         background-color: var(--color-white) /* #fff = #ffffff */;
@@ -670,6 +695,7 @@ margin-bottom: 2rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* shadow-2xl */
   transition: transform 0.3s ease; /* transition-transform */
 }
+
 
 .cta-button:hover {
   transform: scale(1.05); /* hover:scale-105 */

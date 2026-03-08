@@ -1,8 +1,13 @@
 import React from "react";
 import { motion } from "motion/react";
-import { CheckCircle, Calendar, MessageCircle, ArrowRight, Sparkles } from "lucide-react";
+import { CheckCircle, Calendar, MessageCircle, ArrowRight, Sparkles, X, SparkleIcon } from "lucide-react";
+import Modal from "./components/modal";
+import { section } from "motion/react-m";
 
 export default function App() {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const onClose = () => setIsModalOpen(false);
+  
   return (
     <div className="app">
       {/* Navigation / Header */}
@@ -95,15 +100,48 @@ export default function App() {
                   alt="Autora"
                   className="img"
                   referrerPolicy="no-referrer"
-                />
+                /></div>
+                </motion.div>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white text-unalome-green p-8 rounded-3xl shadow-xl max-w-240px">
-                <p className="serif text-xl font-medium mb-2">"El cerebro puede cambiar."</p>
-                <p className="text-xs uppercase tracking-widest opacity-60">Neurociencia Aplicada</p>
-              </div>
-            </motion.div>
-          </div>
+
+                
+        
+         {isModalOpen && (
+  <div className="brief-bio-container bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-2xl border border-white/30">
+
+    <Modal
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
+    >
+      <p className="serif text-xl font-medium mb-2">
+        "Psicóloga Clínica/laboral, Coach ejecutiva certificada internacionalmente por la
+        Pontificia Universidad Católica de Chile, con más de 16 años de experiencia en
+        intervenciones con personas y empresas específicamente con mujeres profesionales,
+        trabajadoras que se enfrentan a desafíos culturales. Especializada en transiciones
+        de vida, claridad emocional y dirección personal."
+      </p>
+
+      <p className="text-xs uppercase tracking-widest opacity-60">
+        Neurociencia Aplicada
+      </p>
+
+    </Modal>
+
+  </div>
+)}
+<div className="flex items-end justify-end">
+<button
+  onClick={() => setIsModalOpen(!isModalOpen)}
+  className="brief-bio-button "
+>
+  {isModalOpen ? "Cerrar Bio" : "Brief Bio"}
+</button>
+</div>
+
+            
         </section>
+                
+       
 
         {/* Motivation Section */}
         <section id="motivation" className="#motivation">
@@ -216,15 +254,15 @@ export default function App() {
                 <ul>
                   <li>
                     <CheckCircle size={20} className="text-white/60" />
-                    <span>8 sesiones individuales</span>
+                    <span>8 sesiones individuales. 45-60 minutos por sesión</span>
                   </li>
                   <li>
                     <CheckCircle size={20} className="text-white/60" />
-                    <span>Acompañamiento personalizado</span>
+                    <span>Acompañamiento personalizado. Incluye seguimiento breve entre sesiones por mensaje</span>
                   </li>
                   <li>
                     <CheckCircle size={20} className="text-white/60" />
-                    <span>Material de apoyo</span>
+                    <span>Al finalizar el proceso tendrás conciencia de como gestionar las herramientas emocionales para lograr los objetivos que te</span>
                   </li>
                 </ul>
               </div>
